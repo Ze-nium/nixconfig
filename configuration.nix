@@ -23,6 +23,7 @@ in
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./boot-configuration.nix
+      ./qemu-hardware-configuration.nix
       ./modules/qylock/qylock.nix
     ];
 
@@ -71,9 +72,6 @@ in
       User = "kian";
     };
   };
-  systemd.tmpfiles.rules = [
-    "f /dev/shm/looking-glass 0660 kian kvm -"
-  ];
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -102,12 +100,6 @@ in
   };
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  # For my Windows 11 GPU Passthrough, we need to allow qemu to have no limits for allocating memory.
-  security.pam.loginLimits = [
-    { domain = "*"; type = "-"; item = "memlock"; value = "unlimited"; }
-    { domain = "@kvm"; type = "hard"; item = "memlock"; value = "unlimited"; }
-  ];
-
   # Configure fonts
   console.font = "Lat2-Terminus16";
   fonts.fontconfig.enable = true;
@@ -134,7 +126,7 @@ in
     shellAliases = {
       ll = "ls -al";
       nix-rebuild = "sudo nixos-rebuild switch";
-      nixconf = "nvim /home/kian/nixconfig/main.nix";
+      nixconf = "nvim /home/kian/nixconfig/configuration.nix";
       hyprconf = "nvim /home/kian/.config/hypr/hyprland.lua";
     };
     promptInit = ''
