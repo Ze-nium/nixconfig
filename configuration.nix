@@ -128,6 +128,7 @@ in
       nix-rebuild = "sudo nixos-rebuild switch";
       nixconf = "nvim /home/kian/nixconfig/configuration.nix";
       hyprconf = "nvim /home/kian/.config/hypr/hyprland.lua";
+      vmng = "python3 /home/kian/Homelab/Scripts/vmng.py";
     };
     promptInit = ''
       source /home/kian/.bash/themes/aphrodite/aphrodite.theme.sh
