@@ -196,7 +196,8 @@ in
     RQuickShare # Desktop Entry for the AppImage
     pear-desktop # Electron App for YouTube Music
     looking-glass-client
-
+    proton-pass
+    proton-pass-cli
     
     # Miscellaneous Applications
     hyprlock
