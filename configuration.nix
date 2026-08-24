@@ -72,6 +72,15 @@ in
       User = "kian";
     };
   };
+
+  systemd.services.systemd-logind.serviceConfig.Environment = [
+    "SYSTEMD_BYPASS_HIBERNATION_MEMORY_CHECK=1"
+  ];
+  systemd.services.systemd-hibernate = {
+    serviceConfig.ExecStartPre = [
+      "-/bin/sh -c 'echo 3 > /proc/sys/vm/drop_caches'"
+    ];
+  };
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -198,6 +207,7 @@ in
     looking-glass-client
     proton-pass
     proton-pass-cli
+    osu-lazer
     
     # Miscellaneous Applications
     hyprlock

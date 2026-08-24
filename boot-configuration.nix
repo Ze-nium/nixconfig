@@ -21,6 +21,9 @@
     "quiet"
     "splash"
   ];
+  boot.kernel.sysctl = {
+    "vm.image_size" = 0;
+  };
   boot.loader.efi.canTouchEfiVariables = true;
   boot.extraModulePackages = [ config.boot.kernelPackages.kvmfr ];
   boot.initrd.kernelModules = [ 
