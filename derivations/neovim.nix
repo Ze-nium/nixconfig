@@ -12,6 +12,7 @@ pkgs.neovim.override {
         nvim-treesitter-parsers.yuck
         nvim-autopairs
         parinfer-rust
+        nvim-tree-lua
       ];
     };
     customRC = ''

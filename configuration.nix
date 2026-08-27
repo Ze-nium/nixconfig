@@ -44,8 +44,10 @@ in
     package = pkgs.plocate;
   };
 
-  services.flatpak.enable = true;
+  qt.enable = true;
 
+  services.flatpak.enable = true;
+  services.openssh.enable = true;
   # services.cron = {
   #   enable = true;
   # systemCronJobs = [
@@ -226,6 +228,12 @@ in
     OVMFFull
     nftables
     qylock-theme
+    quickshell
+    # Qt6 stuff
+    qt6.qtdeclarative
+    qt6.qtsvg
+    qt6.qtmultimedia
+    qt6.qt5compat
 
     # Pacakges for neovim
     lua-language-server
