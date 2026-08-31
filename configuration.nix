@@ -55,25 +55,25 @@ in
   # };
 
   # Systemd Timers
-  systemd.timers."redshift" = {
-    wantedBy = [ "timers.target" ];
-      timerConfig = {
-        OnCalendar = "*-*-* 21-30-*";
-    Persistent = true;
-    Unit = "redshift.service";
-      };
-  };
+  # systemd.timers."redshift" = {
+  #   wantedBy = [ "timers.target" ];
+  #     timerConfig = {
+  #       OnCalendar = "*-*-* 21-30-*";
+  #   Persistent = true;
+  #   Unit = "redshift.service";
+  #     };
+  # };
 
-  systemd.services."redshift" = {
-    script = ''
-      XDG_RUNTIME_DIR=/run/user/1000 DISPLAY=:0 WAYLAND_DISPLAY=wayland-1 ${pkgs.hyprsunset}/bin/hyprsunset -t 1400K 
-      brightnessctl set 10%
-    '';
-    serviceConfig = {
-      Type = "oneshot";
-      User = "kian";
-    };
-  };
+  # systemd.services."redshift" = {
+  #   script = ''
+  #     XDG_RUNTIME_DIR=/run/user/1000 DISPLAY=:0 WAYLAND_DISPLAY=wayland-1 ${pkgs.hyprsunset}/bin/hyprsunset -t 1400K 
+  #     brightnessctl set 10%
+  #   '';
+  #   serviceConfig = {
+  #     Type = "oneshot";
+  #     User = "kian";
+  #   };
+  # };
 
   systemd.services.systemd-logind.serviceConfig.Environment = [
     "SYSTEMD_BYPASS_HIBERNATION_MEMORY_CHECK=1"
@@ -140,6 +140,7 @@ in
       nixconf = "nvim /home/kian/nixconfig/configuration.nix";
       hyprconf = "nvim /home/kian/.config/hypr/hyprland.lua";
       vmng = "python3 /home/kian/Homelab/Scripts/vmng.py";
+      quickshell = "quickshell -p /home/kian/quickshell/";
     };
     promptInit = ''
       source /home/kian/.bash/themes/aphrodite/aphrodite.theme.sh

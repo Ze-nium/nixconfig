@@ -13,6 +13,7 @@ pkgs.neovim.override {
         nvim-autopairs
         parinfer-rust
         nvim-tree-lua
+        kanagawa-nvim
       ];
     };
     customRC = ''
