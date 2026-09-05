@@ -229,6 +229,7 @@ in
     brightnessctl
     qemu_full
     OVMFFull
+    iptables # For legacy applications that require it like Waydroid
     nftables
     qylock-theme
     quickshell
