@@ -14,6 +14,7 @@ pkgs.neovim.override {
         parinfer-rust
         nvim-tree-lua
         kanagawa-nvim
+        nightfox-nvim
       ];
     };
     customRC = ''

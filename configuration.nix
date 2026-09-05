@@ -176,6 +176,8 @@ in
     withUWSM = true;
   };
 
+  virtualisation.waydroid.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -235,6 +237,7 @@ in
     qt6.qtsvg
     qt6.qtmultimedia
     qt6.qt5compat
+    wl-clipboard
 
     # Pacakges for neovim
     lua-language-server
