@@ -177,6 +177,7 @@ in
   };
 
   virtualisation.waydroid.enable = true;
+  virtualisation.waydroid.package = pkgs.waydroid-nftables;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -213,6 +214,7 @@ in
     proton-pass
     proton-pass-cli
     osu-lazer
+    vesktop
     
     # Miscellaneous Applications
     hyprlock
