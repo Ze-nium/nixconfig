@@ -222,6 +222,7 @@ in
     rofi # Application Launcher
     nwg-look
     kdePackages.breeze
+    qpwgraph
 
     # Lower Level Applications and Packages
     librsvg
