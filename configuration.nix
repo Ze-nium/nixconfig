@@ -242,6 +242,8 @@ in
     qt6.qtmultimedia
     qt6.qt5compat
     wl-clipboard
+    grim
+    slurp
 
     # Pacakges for neovim
     lua-language-server
