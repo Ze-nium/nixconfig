@@ -250,6 +250,7 @@ in
     wl-clipboard
     grim
     slurp
+    dnsmasq
 
     # Pacakges for neovim
     lua-language-server
