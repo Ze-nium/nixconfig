@@ -152,7 +152,7 @@ in
   users.users."kian" = {
     isNormalUser = true;
     description = "kian";
-    extraGroups = [ "networkmanager" "wheel" "kvm" ];
+    extraGroups = [ "networkmanager" "wheel" "kvm" "libvirtd" ];
     packages = with pkgs; [
       hyprpaper
       hyprcursor
