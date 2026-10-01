@@ -162,6 +162,10 @@ in
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # For Nemo
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
   
   # Configure manpages
   documentation.enable = true;
@@ -178,6 +182,8 @@ in
 
   virtualisation.waydroid.enable = true;
   virtualisation.waydroid.package = pkgs.waydroid-nftables;
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
