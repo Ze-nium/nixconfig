@@ -42,7 +42,7 @@
     {
       name = "kvmfr";
       text = ''
-        SUBSYSTEM=="kvmfr", GROUP="kvm", MODE="0600", TAG+="uaccess"
+        SUBSYSTEM=="kvmfr", GROUP="kvm", MODE="0660", TAG+="uaccess"
       '';
       destination = "/etc/udev/rules.d/70-kvmfr.rules";
     }

@@ -8,10 +8,6 @@
     "f /dev/shm/looking-glass 0660 kian kvm -"
   ];
 
-  services.udev.extraRules = ''
-    KERNEL=="/dev/kvmfr0", MODE="0660", GROUP="kvm"
-  '';
-
   virtualisation.libvirtd = {
     qemu = {
       verbatimConfig = ''
