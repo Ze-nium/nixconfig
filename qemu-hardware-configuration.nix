@@ -9,7 +9,7 @@
   ];
 
   services.udev.extraRules = ''
-    DEVPATH=="/dev/kvmfr0", MODE="0660", GROUP="kvm"
+    KERNEL=="/dev/kvmfr0", MODE="0660", GROUP="kvm"
   '';
 
   virtualisation.libvirtd = {
