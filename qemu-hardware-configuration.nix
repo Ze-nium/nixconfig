@@ -8,6 +8,8 @@
     "f /dev/shm/looking-glass 0660 kian kvm -"
   ];
 
+  virtualisation.spiceUSBRedirection.enable = true;
+
   virtualisation.libvirtd = {
     qemu = {
       verbatimConfig = ''
