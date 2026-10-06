@@ -133,6 +133,24 @@ in
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
+  programs.obs-studio = {
+    enable = true;
+    package = (
+      pkgs.obs-studio.override {
+        cudaSupport = true;
+      }
+    );
+
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+      obs-backgroundremoval
+      obs-pipewire-audio-capture
+      obs-vaapi
+      obs-gstreamer
+      obs-vkcapture
+    ];
+  };
+
   programs.bash = {
     shellAliases = {
       ll = "ls -al";
@@ -229,6 +247,7 @@ in
     nwg-look
     kdePackages.breeze
     qpwgraph
+    haruna
 
     # Lower Level Applications and Packages
     librsvg
@@ -242,6 +261,7 @@ in
     nftables
     qylock-theme
     quickshell
+
     # Qt6 stuff
     qt6.qtdeclarative
     qt6.qtsvg
