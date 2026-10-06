@@ -239,6 +239,7 @@ in
     proton-pass-cli
     osu-lazer
     vesktop
+    qBittorrent
     
     # Miscellaneous Applications
     hyprlock
