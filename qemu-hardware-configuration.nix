@@ -20,6 +20,7 @@
           "/dev/kvmfr0"
         ]
       '';
+      vhostUserPackages = [ pkgs.virtiofsd ];
     };
   };
 }
