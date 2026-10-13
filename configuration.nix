@@ -240,7 +240,8 @@ in
     osu-lazer
     vesktop
     qbittorrent
-    
+    zed-editor
+
     # Miscellaneous Applications
     hyprlock
     eww
@@ -262,6 +263,8 @@ in
     nftables
     qylock-theme
     quickshell
+    ffmpegthumbnailer # Preview for Nemo
+    poppler-utils # PDF previews
 
     # Qt6 stuff
     qt6.qtdeclarative
@@ -307,7 +310,7 @@ in
     enable = true;
     wayland.enable = true;
     wayland.compositor = "kwin";
-    qylock.theme = "pixel-night-city";
+    qylock.theme = "sword";
     qylock.clockwork.theme = "orbital";
     theme = "${config.services.displayManager.sddm.qylock.theme}";
     package = pkgs.kdePackages.sddm;
